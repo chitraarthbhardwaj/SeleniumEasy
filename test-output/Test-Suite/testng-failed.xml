@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test-Suite]">
+  <test name="ToolsQA(failed)">
+    <classes>
+      <class name="Tests.verifyNewsLetter">
+        <methods>
+          <include name="testNewsletter"/>
+        </methods>
+      </class> <!-- Tests.verifyNewsLetter -->
+    </classes>
+  </test> <!-- ToolsQA(failed) -->
+</suite> <!-- Failed suite [Test-Suite] -->

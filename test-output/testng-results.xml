@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16235" started-at="2021-08-26T08:47:47Z" finished-at="2021-08-26T08:48:03Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16235" started-at="2021-08-26T08:47:47Z" finished-at="2021-08-26T08:48:03Z">
+      <class name="Tests.verifyStoreAllAinCollections">
+        <test-method status="PASS" signature="testStoreAllAinCollections()[pri:0, instance:Tests.verifyStoreAllAinCollections@34cd072c]" name="testStoreAllAinCollections" duration-ms="16223" started-at="2021-08-26T14:17:47Z" finished-at="2021-08-26T14:18:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStoreAllAinCollections -->
+      </class> <!-- Tests.verifyStoreAllAinCollections -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
