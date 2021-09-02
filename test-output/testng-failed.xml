@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.verifyNewsLetter">
+      <class name="Tests.verifyBuyAProduct">
         <methods>
-          <include name="testNewsletter"/>
+          <include name="closemethod"/>
+          <include name="testBuyAProduct"/>
         </methods>
-      </class> <!-- Tests.verifyNewsLetter -->
+      </class> <!-- Tests.verifyBuyAProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

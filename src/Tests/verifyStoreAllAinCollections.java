@@ -16,16 +16,14 @@ public class verifyStoreAllAinCollections extends SetupClasses.DriverHelper
 		{
 			Browser("chrome");
 			getDriver().get(readProperty("URL"));
-			List<WebElement> list=getDriver().findElements(By.tagName("a"));
-			
-			Iterator<WebElement> it=list.iterator();
-			
-			while(it.hasNext())
+			List<WebElement> list=new ArrayList<>();
+			for(int i=0;i<=list.size();i++)
 			{
-				System.out.println(list);
+			list=getDriver().findElements(By.tagName("p"));
+			System.out.println(list);	
 			}
 			
-			
+			getDriver().close();
 			
 		}
 }

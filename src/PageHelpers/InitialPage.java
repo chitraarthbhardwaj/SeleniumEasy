@@ -12,7 +12,5 @@ public class InitialPage
  public String BestSellers="//a[@class='blockbestsellers']";
  public String NewsLetter="//input[@class='inputNew form-control grey newsletter-input']";
  public String submitNewsLetter="//button[@type='submit']/span";
- public String alertnewssuccess="/html/body/div/div[2]/div/p";
-	
-	
+ public String alertnewssuccess="/html/body/div/div[2]/div/p";	
 }
