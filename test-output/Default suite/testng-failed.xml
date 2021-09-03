@@ -5,7 +5,6 @@
     <classes>
       <class name="Tests.verifyBuyAProduct">
         <methods>
-          <include name="closemethod"/>
           <include name="testBuyAProduct"/>
         </methods>
       </class> <!-- Tests.verifyBuyAProduct -->

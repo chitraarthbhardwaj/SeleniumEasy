@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -34,22 +35,25 @@ public class verifyBuyAProduct extends SetupClasses.DriverHelper
 		getDriver().findElement(By.xpath(i.searchButton)).click();
 		WaitForPageLoad();
 		JavascriptExecutor js=(JavascriptExecutor) getDriver();
-		js.executeScript("window.scrollBy(0,1200)", "");
+		js.executeScript("window.scrollBy(0,1400)", "");
+		//js.executeScript("arguments[0].click();", )
 		
 		List<WebElement> li=getDriver().findElements(By.tagName("a"));
+		
 		for(WebElement aa: li)
 		{
-			System.out.println(aa.getText());
-		if(aa.getText()=="Blouse")
-		{
-			aa.click();
-			System.out.println(aa.getText());
+			WebElement aas=getDriver().findElement(By.xpath("//a[@title='Blouse']"));
+			aas.click();
 		}
-		else
-			continue;
+		
+		List<WebElement> frames=getDriver().findElements(By.tagName("iframe"));
+		for(WebElement framing:frames)
+		{
+			getDriver().switchTo().frame(getDriver().findElement(By.xpath("iframe[@class='fancybox-iframe']")));
 		}
 		
 	//	WaitForElementVisibility(pp.ProceedToCheckoutOnProductPage);
+		getDriver().findElement(By.xpath("//div[@class='fancybox-overlay fancybox-overlay-fixed'][@style='display: block; width: auto; height: auto;']//div[@class='fancybox-wrap fancybox-desktop fancybox-type-iframe fancybox-opened'"));
 		getDriver().findElement(By.xpath(pp.AddToCartButton)).click();
 		getDriver().findElement(By.xpath(pp.ProceedToCheckoutOnProductPage)).click();
 		//getDriver().findElement(By.xpath(pp.ProceedToCheckout)).click();
@@ -59,15 +63,12 @@ public class verifyBuyAProduct extends SetupClasses.DriverHelper
 			Assert.assertTrue(true);
 		}
 		
-		getDriver().close();
+	//	getDriver().close();
 		
 	}
-	
-	@AfterTest
-	void closemethod()
-	{
-		getDriver().close();
-	}
+	/*
+	 * @AfterTest void closemethod() { getDriver().close(); }
+	 */
 	
 	
 }
